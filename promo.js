@@ -10,12 +10,12 @@ const filterLongNumbers = (array) => {
   return array.filter(checkLength);
 }
 
-const each_name = (something) => {
-  return `Hi ${something}! 50% off our best candies for you today!`;
+const each_name = (name, discount) => {
+  return `Hi ${name}! ${discount}% off our best candies for you today!`;
 }
 
 const generateMessages = (names) => {
-  return names.map(each_name);
+  return names.map((name) => each_name(name.name, name.discount));
 }
 
 module.exports = { each_name, generateMessages };
